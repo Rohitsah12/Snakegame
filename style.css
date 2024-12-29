@@ -1,34 +1,30 @@
-/* General body styling */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Adjusted to start from the top */
+    justify-content: flex-start; 
     height: 100vh;
     background-color: antiquewhite;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Scoreboard styling */
 #score-board {
-    position: relative; /* Changed to relative for better alignment */
+    position: relative; 
     font-size: 32px;
     font-weight: bold;
     color: #333;
     text-align: center;
-    margin-bottom: 10px; /* Added margin for spacing */
+    margin-bottom: 10px;
     z-index: 15;
 }
 
-/* Game container styling */
 #game-container {
     position: relative;
     width: 600px;
     height: 600px;
 }
 
-/* Game arena styling */
 #game-arena {
     width: 600px;
     height: 600px;
@@ -39,7 +35,6 @@ body {
     overflow: hidden;
 }
 
-/* Button styling */
 .game-button {
     background-color: orangered;
     color: white;
@@ -61,7 +56,6 @@ body {
     background-color: #ff3300;
 }
 
-/* Food styling */
 .food {
     width: 20px;
     height: 20px;
@@ -77,7 +71,6 @@ body {
     }
 }
 
-/* Snake segment styling */
 .snake {
     width: 20px;
     height: 20px;
