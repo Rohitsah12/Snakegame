@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded',function (){
     const cellSize=20;
     let score=0;
     let gameStarted=false;
-    let food={x:300,y:200}; // {x:15*20,y:10*20} // -> cell coordinate -> pixels
+    let food={x:300,y:200}; // {x:15*20,y:10*20} // -> cell coordinate -> pixels top left pixels for food
     let snake = [{x:160,y:200},{x:140,y:200},{x:120,y:200}];
 
     function drawDiv(x,y,className){
         const divElement=document.createElement('div');
         divElement.classList.add(className);
-        divElement.style.top=`{y}px`;
-        divElement.style.left=`{x}px`;
+        divElement.style.top=`${y}px`;
+        divElement.style.left=`${x}px`;
         return divElement
     }
 
@@ -20,13 +20,21 @@ document.addEventListener('DOMContentLoaded',function (){
         gameArena.innerHTML='';//clear the game arena
         //wipe out everythin and redraw with new positions
 
+
+        snake.forEach((snakeCell)=>{
+            const snakeElement=drawDiv(snakeCell.x,snakeCell.y,'snake');
+            gameArena.appendChild(snakeElement);
+        })
+
         const foodELement = drawDiv(food.x,food.y,'food');
+        gameArena.appendChild(foodELement);
     }
 
     function runGame(){
         if(!gameStarted){
             gameStarted=true;
             //gameLoop: todo
+            drawFoodAndSnake();
         }
     }
 
