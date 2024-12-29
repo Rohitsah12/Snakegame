@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnakeGame</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-arena">
-
+    <div id="score-board">Score: 0</div>
+    <div id="game-container">
+        <div id="game-arena"></div>
+        <button id="start-button" class="game-button">Start Game</button>
+        <button id="restart-button" class="game-button" style="display: none;">Play Again</button>
     </div>
-
-    <script src="./script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
